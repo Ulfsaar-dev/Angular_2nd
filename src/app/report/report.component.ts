@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-report',
@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ReportComponent implements OnInit {
 
   constructor() { }
-  title = 'report';
+  report : any;
+  @Input() reports: Array<{ name:string }> = [
+    { name:'report1' },
+    { name:'report2' },
+  ];
   ngOnInit() {
   }
 
