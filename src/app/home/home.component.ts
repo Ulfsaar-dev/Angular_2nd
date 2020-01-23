@@ -3,32 +3,43 @@ import { UserComponent } from '../user/user.component';
 import { ReportComponent } from '../report/report.component';
 import { MealComponent } from '../meal/meal.component';
 
+export interface Data {
+  id:number,
+  name:string
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
+
 export class HomeComponent implements OnInit {
 
-  constructor() { }
   
-  @Input() users: Array<{ id:number, name:string}> = [
-    { id:1, name:'user1'},
-    { id:2, name:'user2'},
-    { id:3, name:'user3'}
+  user_list: Array<Data> = [
+    { id:1, name:'John' },
+    { id:2, name:'Jane' },
   ];
-  
-  @Input() reports: Array<{ id:number, name:string}> = [
-    { id:1, name:'report1'},
-    { id:2, name:'report2'},
+
+  meal_list: Array<Data> = [
+    { id:1, name:'fork' },
+    { id:2, name:'beef' },
+    { id:3, name:'vegetable' },
+    { id:4, name:'fish' },
   ];
-  
-  @Input() meals: Array<{ id:number, name:string}> = [
-    { id:1, name:'meal1'},
-    { id:2, name:'meal2'},
-    { id:3, name:'meal3'},
-    { id:4, name:'meal4'},
+
+  report_list: Array<Data> = [
+    { id:1, name:'first_report' },
+    { id:2, name:'second_report' },
+    { id:3, name:'third_report' },
   ];
+
+  constructor() {
+
+  }
 
   ngOnInit() {
     

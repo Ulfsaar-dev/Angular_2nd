@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Data } from '../home/home.component';
 
 @Component({
   selector: 'app-user',
@@ -6,14 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  @Input() user;
   constructor() { }
-  user : any;
-  @Input() users: Array<{ name:string }> = [
-    { name:'user1' },
-    { name:'user2' },
-    { name:'user3' },
-  ];
   
   ngOnInit() {
     
