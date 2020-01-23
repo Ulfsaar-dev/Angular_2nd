@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Data } from '../home/home.component';
 
 @Component({
   selector: 'app-report',
@@ -6,13 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./report.component.css']
 })
 export class ReportComponent implements OnInit {
-
+  @Input() report;
   constructor() { }
-  report : any;
-  @Input() reports: Array<{ name:string }> = [
-    { name:'report1' },
-    { name:'report2' },
-  ];
+
   ngOnInit() {
   }
 
