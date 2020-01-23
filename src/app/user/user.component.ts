@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
 
   constructor() { }
-  title = 'user';
+  user : any;
+  @Input() users: Array<{ name:string }> = [
+    { name:'user1' },
+    { name:'user2' },
+    { name:'user3' },
+  ];
+  
   ngOnInit() {
+    
   }
 
 }

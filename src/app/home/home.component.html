@@ -1,6 +1,21 @@
-  <p *ngFor = "let user of users">{{user}}</p> 
-  <br>
-  <p *ngFor = "let report of reports">{{report}}</p> 
-  <br>
-  <p *ngFor = "let meal of meals">{{meal}}</p> 
+<p 
+  *ngFor="let user of users">
+  {{user.name}}
+  <app-user (user)="user"></app-user> 
+</p>
 
+<br>
+
+<p 
+  *ngFor="let report of reports">
+  {{report.name}}
+  <app-report (report)="report"></app-report> 
+</p>
+
+<br>
+
+<p 
+  *ngFor="let meal of meals">
+  {{meal.name}}
+  <app-meal (meal)="meal"></app-meal> 
+</p>
